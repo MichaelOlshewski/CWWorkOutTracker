@@ -5,10 +5,11 @@ const path = require("path");
 
 // DB Connect Request
 require("dotenv/config");
-const conDB = require("./config/connectDB");
+const connectDB = require("./config/connectDB.js");
 
 // Import Models
 const db = require("./models");
+const { connect } = require("http2");
 
 // Create A New Instance of an Express App
 const app = express();
@@ -92,7 +93,7 @@ app.put("/api/workouts/:id", (req, res) => {
 
 /************ Post Routes ************/
 
-conDB();
+connectDB();
 
 app.listen(PORT, function () {
     console.log(
