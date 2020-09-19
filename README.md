@@ -2,6 +2,8 @@
 
 ![index.html](public/images/indexImage.png)
 
+### **Link to the Live Application:** [https://cwworkouttracker.herokuapp.com/](https://cwworkouttracker.herokuapp.com/)
+
 ## **Description**
 
 This is a simple full stack application that we completed in the Case Western Reserve University Full Stack Coding Bootcamp. This was developed using NodeJS, ExpressJS and MongoDB to create an excercise tracking application that stores the user exercise history. Navigating to your stats page, it will show some charts of all your exercise that you have logged. There are multiple types of exercises that you can log.
