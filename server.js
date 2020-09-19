@@ -34,7 +34,7 @@ app.get("/exercise", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "exercise.html"));
 });
 
-app.get("/", (req, res) => {
+app.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "stats.html"));
 });
 
@@ -92,6 +92,20 @@ app.put("/api/workouts/:id", (req, res) => {
 });
 
 /************ Post Routes ************/
+
+app.post("/api/workouts", (req, res) => {
+    let data = req.body;
+
+    db.Workout.create({
+        day: new Date().setDate(new Date().getDate()),
+    })
+        .then((dbUpdate) => {
+            res.json(dbUpdate);
+        })
+        .catch((err) => {
+            res.json(err);
+        });
+});
 
 connectDB();
 
